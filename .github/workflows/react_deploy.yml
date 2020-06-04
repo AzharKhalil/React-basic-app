@@ -39,5 +39,8 @@ jobs:
     - name: yarn build
       run: yarn build
       
+    - name: Install surge
+      run: npm install --global surge
+      
     - name: deploy surge
       run: surge ./build react-basic-bootcamp.surge.sh  --token #{{secrets.SURGE_TOKEN}}
